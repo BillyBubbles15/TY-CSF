@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Yadav</title>
+</head>
+
+<link rel="stylesheet" href="index.css">
+<script  src="scripts.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script  src="./spotify.js"></script>
+
+<script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut(5000,);
+    });
+
+    function redirectToGitHub() {
+        window.location.href = 'https://github.com/BillyBubbles15';
+      }
+    function redirectToLinkdin() {
+        window.location.href = 'https://www.linkedin.com/in/atharva-yadav-5423b6208/'; 
+      }
+
+  </script>
+
+<body>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+    
+    <section class="navd">
+        <img class="logo" src="Alogo.png" alt="">
+        <img class="github" src="assets/github.png" alt="" onclick="redirectToGitHub()">
+        <img class="linkedin" src="assets/linkedin.png" alt="" onclick="redirectToLinkdin()">
+        <button class="navbar-toggle" onclick="toggleNavbar()"><img src="assets/menu.png" alt="" height="64px"></button>
+         <ul class="change-color">
+            <li><a href="skills.html">SKILLS</li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="hobbies.html">HOBBIES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+         </ul>
+
+    </section>
+
+    <section id="listitem">
+        <ul>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="hobbies.html">HOBBIES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+         </ul>
+    </section>
+    <div class="container">
+
+
+    <section class="spot">
+            <div id="trackArtwork"></div>
+            <div class="tittle">
+                <div class="trackInfo">
+                    <div class="spotname"><p id="trackName" ></p><p id="artist"></p></div>                 
+                    </div>
+            </div>            
+    </section>
+
+    <section class="primary" id="section1">
+        <h1>Atharva Yadav</h1>
+        <h2>Web-Developer</h2>
+    </section>
+
+    <section id="skills"  id="section2">
+        <h2>More about me</h2>
+    </section>
+    </div>
+    
+</body>
+</html>
