@@ -35,7 +35,7 @@ let userToken = getAccessToken();
 userToken.then(function (result) {
   console.log(' Access:', result)
   accessToken = result; // Store the access token globally
-  setInterval(updateCurrentlyPlayingTrack, 2000); // Call the function periodically
+  setInterval(updateCurrentlyPlayingTrack, 7000); // Call the function periodically
 });
 
 function updateCurrentlyPlayingTrack() {
@@ -61,7 +61,7 @@ function getCurrentlyPlayingTrack(accessToken) {
         var artist = document.getElementById('artist');
         var device = document.getElementById('device');
 
-        artworkID.innerHTML = '<img src="spotify.png" alt="Spotify Logo">';
+        artworkID.innerHTML = '<img src="spotify.png" alt="" onclick="redirectToSpotify()">';
         track.textContent = message;
         artist.textContent = "That is rare"; // Remove the previous artist name
         device.textContent = ""; // Remove the previous device name
@@ -82,11 +82,10 @@ function getCurrentlyPlayingTrack(accessToken) {
 
       // Check if the values have changed before updating the DOM
       if (trackName !== prevTrackName) {
-        artworkID.innerHTML = '<img src=' + artwork + '>';
+        artworkID.innerHTML = '<img src=' + artwork +  ' alt="Album Artwork" onclick="redirectToSpotify(\'' + data.item.album.id + '\')">';
         track.textContent = trackName;
         prevTrackName = trackName;
       }
-
       if (artistName !== prevArtistName) {
         artist.textContent = 'By ' + artistName;
         prevArtistName = artistName;
